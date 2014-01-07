@@ -163,7 +163,7 @@ $(function () {
     				var currState, undoState, state, prevState, stateOccurances;
     				// isBackForward = (window.History.storedStates.length - historyLength) === 1;
 
-    				if ($("#sample-title")[0] !== undefined && $("#sample-title")[0].textContent.toLowerCase() !== "history.js integration") {
+    				if ($("#sample-title")[0] !== undefined && $("#sample-title")[0].textContent !== undefined && $("#sample-title")[0].textContent.toLowerCase() !== "history.js integration") {
     					// This check is not related to history.js integaration. It's done to integrate the sample with the Samples Browser.
     					return;
     				}
@@ -272,7 +272,7 @@ $(function () {
 
             //--> Create URL 
             function formURL(key, value, multiple) {
-                var params = window.location.search,
+            	var params = window.location.search,
                     urlValue = value, urlIndex, currentUrl, currentColumnState;
 
                 if (isEmptyValue(value)) { // remove parameters encoded in the URL
